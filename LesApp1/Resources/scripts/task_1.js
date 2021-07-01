@@ -1,14 +1,12 @@
 // перевірка
-// реалізація через звичайну функцію
-let input_a = Number(prompt(MessageInput(1, "мінімального значення"), 0));
-// реалізація через стрілочну функцію (лямда-вираз)
-let input_b = Number(prompt(MessageInput(2, "мінімального значення"), 0));
+let input_a = Number(prompt(MessageInput(1, "мінімального значення"), 0)),
+    input_b = Number(prompt(MessageInput(2, "мінімального значення"), 0));
 
 // перевірка на коректність вхідних даних
 if (isNaN(input_a) || isNaN(input_b)) {
     alert("Помилка введених даних!");
 }
-else{
+else {
     alert(`Мінімальне значення серед введених ${input_a} і ${input_b} є: ${Min(input_a, input_b)}`);
 }
 
