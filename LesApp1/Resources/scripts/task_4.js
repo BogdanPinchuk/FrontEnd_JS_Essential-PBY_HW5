@@ -17,4 +17,3 @@ function Random(min, max) {
     // додано на випадок, якщо юзер введе невірно значення
     return Math.random() * Math.abs(max - min) + Math.min(min, max);
 }
-
