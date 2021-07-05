@@ -1,15 +1,19 @@
 // перевірка
 let inputArray = [];
-inputArray[0] = prompt(MessageInput(1, "середнього арифметичного значення"));
-inputArray[1] = prompt(MessageInput(2, "середнього арифметичного значення"));
-inputArray[2] = prompt(MessageInput(3, "середнього арифметичного значення"));
+// inputArray[0] = prompt(MessageInput(1, "середнього арифметичного значення"));
+// inputArray[1] = prompt(MessageInput(2, "середнього арифметичного значення"));
+// inputArray[2] = prompt(MessageInput(3, "середнього арифметичного значення"));
+for (let i = 0; i < 3; i++) {
+    inputArray[i] = prompt(MessageInput(i + 1, "середнього арифметичного значення"));
+}
+
 
 // розрахунок середнього арифметичного
 let res = Avg(inputArray);
 
 // звіт
 if (!isNaN(res)) {
-    alert(`Середнє арифметичне значення: ${res}`);
+    alert(`Середнє арифметичне значення: ${res.toFixed(3)}`);
 }
 
 // функція розрахунку среднього арифметичного
@@ -20,7 +24,10 @@ function Avg(array) {
 
     // розрахунок суми
     for (const value of array) {
-        if (value != "" && !isNaN(Number(value))) {
+        // 1 - для пустого введення
+        // 2 - якщо введено не число (абракадабра)
+        // 3 - якщо натиснута відміна
+        if ((value != "") && !isNaN(Number(value)) && (value != null)) {
             sum += Number(value);
             counter++;
         }
