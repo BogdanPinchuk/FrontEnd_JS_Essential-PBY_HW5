@@ -1,5 +1,5 @@
 var data = [1, 2, 3, 4, 5];
-console.log(`Вхідні дані: ${data}`);
+console.log(`Вхідні дані: ${data.join(', ')}`);
 
 // old
 /*
